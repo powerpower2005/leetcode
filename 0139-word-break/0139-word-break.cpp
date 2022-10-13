@@ -16,13 +16,14 @@ public:
         if(result != -1){
             return result;
         }
+        cout << result << '\n';
         result = 0;
         for(auto w : dict){
             int wSize = w.size();
             if(idx + wSize > x)continue;
             string comp = s.substr(idx, wSize);
             if(comp == w){
-                result |= check(s, idx + wSize, dict, dp);  //하나라도 1이면 가능
+                result = check(s, idx + wSize, dict, dp);  //하나라도 1이면 가능
                 if(result == 1)return result;
             }
         }
