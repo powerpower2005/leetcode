@@ -7,8 +7,6 @@ public:
     
     //fromHere(r,c) : grid 상태에서 (r,c)부터 시작해서 얻을 수 있는 골드 최대값
     int fromHere(int r, int c, vector<vector<int>>& grid){
-        if(r < 0 || c < 0 || r >= rows || c >= cols)return 0;
-        if(grid[r][c] == 0)return 0;
         int result = grid[r][c];
         int temp = grid[r][c];
         grid[r][c] = 0;
