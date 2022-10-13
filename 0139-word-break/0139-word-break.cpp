@@ -16,8 +16,8 @@ public:
         if(result != -1){
             return result;
         }
-        cout << result << '\n';
-        result = 0;
+        //cout << result << '\n';
+        result = 0; // result를 0으로 초기화하는 이유.  -1이 아니어야 바로 반환하기 때문
         for(auto w : dict){
             int wSize = w.size();
             if(idx + wSize > x)continue;
